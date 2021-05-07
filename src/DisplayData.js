@@ -65,7 +65,7 @@ export default function DisplayData(props) {
       .then((res) => {
         // console.log(res);
         setApiData(res.data);
-        window.history.pushState(null,null,'/homepage');
+        // window.history.pushState(null,null,'/homepage');
       })
       .catch((error) => {
         console.log(error);
@@ -73,7 +73,7 @@ export default function DisplayData(props) {
   }, []);
 
   useEffect(() => {
-    BASE_URL_UPDATED = BASE_URL + querystring.stringify({ ...filters });
+    // BASE_URL_UPDATED = BASE_URL + querystring.stringify({ ...filters });
     axios
       .get(BASE_URL_UPDATED)
       .then((res) => {
@@ -140,7 +140,7 @@ export default function DisplayData(props) {
         {apiData.map((flight) => (
           <div id="flightdata">
               <div id="image">
-            <img src={flight.links.mission_patch_small} alt="loading..." />
+            <img src={flight.links.mission_patch_small} alt="Picture cannot be displayed LOLWA" />
             </div>
             <div id="flight-data-items">
                 <div id="mission-name">{flight.mission_name} #{flight.flight_number}</div>
