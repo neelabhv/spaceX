@@ -1,0 +1,120 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(236, 234, 234);
+}
+#flights{
+    display:flex;
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap; */
+    /* border:2px solid green; */
+}
+
+aside{
+    margin: 10px 10px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    flex:0 0 14%;
+    background-color:white;
+    /* border: 2px solid red; */
+    height:100%;
+    border-radius: 10px;
+    /* position: fixed; */
+}
+#year{
+    margin:10px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#apidata{
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* border: 2px solid black; */
+}
+#flightdata{
+    flex-basis:20%;
+    max-width: 300px;
+    /* width:30%; */
+    /* border:2px solid blue; */
+    background-color: white;
+    margin:10px;
+    border-radius: 10px;
+}
+#image{
+    padding:20px;
+    width:100%;
+    /* background-color: rgb(236, 234, 234); */
+}
+img{
+    background-color: rgb(236, 234, 234);
+}
+#title{
+    font-weight: bold;
+    margin:5px;
+    font-size: 22px;
+}
+.heading{
+    text-align: center;
+    color: darkslateblue;
+    font-size: 19px;
+    /* align-items: center; */
+    border-bottom: 1px solid chocolate;
+}
+
+button{
+    padding:5px 12px;
+    margin:2px;
+    background-color: rgb(168, 238, 168);
+    border-radius: 4px;
+    border:none;
+    cursor:pointer;
+    font-size: 17px;
+    /* align-items: center; */
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+    margin:10px;
+}
+#mission-name{
+    font-weight: bolder;
+    font-size:larger;
+    color: darkslateblue;
+}
+
+#page-head{
+    font-weight: bold;
+    font-size: xx-large;
+    margin: 10px;
+}
+
+#launch{
+    padding:10px;
+}
+
+#land{
+    padding: 10px;
+}
+
+#flight-data-items{
+    margin:20px;
+}
+
+.flight-det{
+    margin-top: 7px;
+}
+
+@media screen and (max-width:700px){
+    #flights{
+        display:flex;
+        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
+        /* border:2px solid green; */
+    }
+}
