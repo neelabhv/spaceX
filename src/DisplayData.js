@@ -77,7 +77,6 @@ export default function DisplayData(props) {
     axios
       .get(BASE_URL_UPDATED)
       .then((res) => {
-        window.history.replaceState(null,'',`${querystring.stringify({ ...filters })}`);
         setApiData(res.data);
       })
       .catch((error) => {
