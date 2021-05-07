@@ -73,7 +73,7 @@ export default function DisplayData(props) {
   }, []);
 
   useEffect(() => {
-    // BASE_URL_UPDATED = BASE_URL + querystring.stringify({ ...filters });
+    BASE_URL_UPDATED = BASE_URL + querystring.stringify({ ...filters });
     axios
       .get(BASE_URL_UPDATED)
       .then((res) => {
