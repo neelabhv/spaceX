@@ -143,9 +143,12 @@ export default function DisplayData(props) {
             </div>
             <div id="flight-data-items">
                 <div id="mission-name">{flight.mission_name} #{flight.flight_number}</div>
-            <div class="flight-det">Successful Launch : {flight.launch_success} </div>
-            <div class="flight-det">Launch Year : {flight.launch_year}</div>
-            <div class="flight-det">Successful Landing : {flight.rocket.first_stage.cores[0].land_success}</div>
+            <div class="flight-det"><b>Successful Launch : </b>{flight.launch_success ? "True" : "False"} </div>
+            <div class="flight-det"><b>Launch Year : </b>{flight.launch_year}</div>
+            <div class="flight-det"><b>Launch Site Name : </b>{flight.launch_site.site_name}</div>
+            <div class="flight-det"><b>Details : </b>{flight.details === null ? "Not Available" : `${flight.details}`}</div>
+            <div class="flight-det"><b>Youtube : </b> <a href={flight.links.video_link}>click here</a></div>
+            <div class="flight-det"><b>Successful Landing : </b>{flight.rocket.first_stage.cores[0].land_success ? "True" : "False"}</div>
             
             </div>
           </div>
