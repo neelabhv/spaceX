@@ -1,8 +1,11 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect, Fragment, Suspense } from "react";
 import axios from "axios";
-import querystring from "querystring";
-import Cards from './Cards';
 import "./displaydata.css";
+import querystring from "querystring";
+// import Cards from './Cards';
+import Loading from "./Loading";
+const Cards = React.lazy(() => import("./Cards.js"));
+
 
 let BASE_URL = "https://api.spacexdata.com/v3/launches?limit=100&";
 let BASE_URL_UPDATED = "";
@@ -131,7 +134,9 @@ export default function DisplayData(props) {
       <div id="apidata">
         {apiData.map((flight) => (
           <div id="flightdata">
-              <Cards flight={flight}/>
+              <Suspense fallback={<Loading/>}>
+                <Cards flight={flight}/>
+              </Suspense>
           </div>
         ))}
       </div>
