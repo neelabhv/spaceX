@@ -92,6 +92,7 @@ button{
     font-weight: bold;
     font-size: xx-large;
     margin: 10px;
+    flex-wrap: wrap;
 }
 
 #launch{
@@ -109,12 +110,23 @@ button{
 .flight-det{
     margin-top: 7px;
 }
-
+.expand{
+    padding:0px;
+    background-color: thistle;
+}
+.expand-div{
+    display: inline;
+}
 @media screen and (max-width:700px){
     #flights{
         display:flex;
         flex-wrap: wrap;
-        /* flex-wrap: wrap; */
-        /* border:2px solid green; */
+    }
+    #sidebar{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #page-head{
+        word-wrap: break-word;
     }
 }
