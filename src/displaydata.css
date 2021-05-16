@@ -22,7 +22,7 @@ aside{
     /* border: 2px solid red; */
     height:100%;
     border-radius: 10px;
-    /* position: fixed; */
+    box-shadow: 2px 2px 5px 1px saddlebrown;
 }
 #year{
     margin:10px;
@@ -39,16 +39,17 @@ aside{
 }
 #flightdata{
     flex-basis:20%;
-    max-width: 300px;
-    /* width:30%; */
-    /* border:2px solid blue; */
+    /* max-width: 300px; */
+    /* width:%; */
+    /* border:2px solid olive; */
     background-color: white;
-    margin:10px;
+    margin:10px 0;
     border-radius: 10px;
+    box-shadow: 2px 2px 5px 1px seagreen;
 }
 #image{
     padding:20px;
-    width:100%;
+    /* width:100%; */
     /* background-color: rgb(236, 234, 234); */
 }
 img{
@@ -123,10 +124,32 @@ button{
         flex-wrap: wrap;
     }
     #sidebar{
+        display: flex;
         margin-left: auto;
         margin-right: auto;
+       
     }
+    
     #page-head{
         word-wrap: break-word;
+        /* font-size: larger; */
+        /* display: none; */
     }
+    
 }
+
+/* @media screen and (min-width:701px){
+    aside{
+        position:fixed;
+        flex: 0 0 20%;
+        display:flex;
+        flex-wrap: wrap;
+        flex-basis: 20px;
+    }
+    #year{
+        margin:10px;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+} */
