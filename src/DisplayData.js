@@ -90,11 +90,11 @@ export default function DisplayData(props) {
       <aside id="sidebar">
           <div id="title">
       Filters</div>
-      <div class="heading">Launch Year</div>
+      <div className="heading">Launch Year</div>
         <div id="year">{renderYear()}</div>
         <div id="launch">
-          <div class="heading">Successful Launch</div>
-          <div class="btn">
+          <div className="heading">Successful Launch</div>
+          <div className="btn">
           <button
             id="launch_success"
             value="true"
@@ -112,8 +112,8 @@ export default function DisplayData(props) {
           </div>
         </div>
         <div id="land">
-        <div class="heading">Successful Landing</div>
-        <div class="btn">
+        <div className="heading">Successful Landing</div>
+        <div className="btn">
           <button
             id="land_success"
             value="true"
@@ -133,7 +133,7 @@ export default function DisplayData(props) {
       </aside>
       <div id="apidata">
         {apiData.map((flight) => (
-          <div id="flightdata">
+          <div id="flightdata" key={flight.id}>
               <Suspense fallback={<Loading/>}>
                 <Cards flight={flight}/>
               </Suspense>
